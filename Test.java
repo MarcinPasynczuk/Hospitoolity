@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Test {
@@ -53,9 +54,9 @@ public class Test {
     public String toString() {
         return
                 date + "," +
-                fridge1 + "," +
-                fridge2 + "," +
-                info;
+                        fridge1 + "," +
+                        fridge2 + "," +
+                        info;
     }
 
     public void saveData() throws IOException {
@@ -79,59 +80,55 @@ public class Test {
         }
 
 
-if (checker){
-        try (FileOutputStream fos = new FileOutputStream("text.txt", true)) {
-            fos.write(toString().getBytes());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }}
-else {
-    System.out.println(date);
-changer();
-}
-        }
-
-
-        public void changer() throws IOException {
-            System.out.println(date);
-            FileReader fr = new FileReader("text.txt");
-            BufferedReader br = new BufferedReader(fr);
-            String line;
-            while((line = br.readLine()) != null) {
-                if(line.contains(date)) {
-                    line = line.replace("19/02/1900", "new line");
-                }
-            }
-
-        }
-
-        public void reader() {
-            Scanner scanner = null;
-            try {
-                scanner = new Scanner(new FileReader("text.txt"));
-                scanner.useDelimiter(",");
-                while(scanner.hasNextLine()) {
-                    String date = scanner.next();
-                    scanner.skip(scanner.delimiter());
-                    String first = scanner.next();
-                    scanner.skip(scanner.delimiter());
-                    String second = scanner.next();
-                    scanner.skip(scanner.delimiter());
-                    String info = scanner.next();
-
-                    System.out.print(date + " " + first + " " + second + " " + info);
-
-                }
-
-            } catch(IOException e) {
-
+        if (checker) {
+            try (FileOutputStream fos = new FileOutputStream("text.txt", true)) {
+                fos.write(toString().getBytes());
+            } catch (IOException e) {
                 e.printStackTrace();
-            } finally {
-                if(scanner != null) {
-                    scanner.close();
-                }
+            }
+        } else {
+            System.out.println(date);
+            changer();
+        }
+    }
+
+
+    public void changer() throws IOException {
+        System.out.println(date);
+        FileReader fr = new FileReader("text.txt");
+        BufferedReader br = new BufferedReader(fr);
+        String line;
+        while ((line = br.readLine()) != null) {
+            if (line.contains(date)) {
+                line = line.replace("19/02/1900", "new line");
             }
         }
+
+    }
+
+    public void reader() throws FileNotFoundException {
+        Scanner scanner = new Scanner(new FileReader("text.txt"));
+        scanner.useDelimiter(",");
+        try {
+            do {
+                String date = scanner.next();
+                scanner.skip(scanner.delimiter());
+                String first = scanner.next();
+                scanner.skip(scanner.delimiter());
+                String second = scanner.next();
+                scanner.skip(scanner.delimiter());
+                String info = scanner.next();
+
+                System.out.print(String.format("%-10s | %-10s | %-10s | %s", date, first, second, info));
+
+            } while (scanner.hasNextLine());
+            scanner.close();
+        } catch (NoSuchElementException e) {
+            System.out.println();
+            System.out.println("All valid data has been printed.");
+        }
+    }
+
 
 
 
