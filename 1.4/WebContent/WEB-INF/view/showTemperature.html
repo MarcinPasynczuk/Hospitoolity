@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add temperature.</title>
+</head>
+<body>
+	<h1>List of stored temperatures.</h1>
+	
+	<div>
+		<table th:if="${!temperatureCheckers.empty}">
+			<tr>
+				<td>Date</td>
+				<td>#1 Fridge Temp</td>
+				<td>#2 Fridge Temp</td>
+				<td>#3 Fridge Temp</td>
+				<td>#4 Fridge Temp</td>
+				<td>#5 Fridge Temp</td>
+				<td>#5 Fridge Temp</td>
+				<td>Checked by:</td>
+			</tr>
+			<tr th:each="temperatureChecker : ${temperatureCheckers}">
+			<td th:text="${temperatureChecker.date}"></td>
+				<td th:text="${temperatureChecker.firstFridgeTemperature}"></td>
+				<td th:text="${temperatureChecker.secondFridgeTemperature}"></td>
+				<td th:text="${temperatureChecker.thirdFridgeTemperature}"></td>
+				<td th:text="${temperatureChecker.fourthFridgeTemperature}"></td>
+				<td th:text="${temperatureChecker.fifthFridgeTemperature}"></td>
+				<td th:text="${temperatureChecker.whoCheckedTemperature}"></td>
+																
+			</tr>
+		</table>
+		<span th:if="${temperatureCheckers.empty}">No temperature stored.</span>
+	</div>
+	
+	<p>
+		<a th:href="@{/}">Back</a>
+	</p>
+
+</body>
+</html>
