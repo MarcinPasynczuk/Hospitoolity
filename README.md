@@ -5,4 +5,9 @@ ver. 1.2
 - Saving data top .txt file.
 - Reading data from file and then sorting it out by date.
 
-ver. 1.3
+ver. 1.4
+-rebuild for Spring.
+-added html to project.
+-simple form for temperature storing.
+
+
