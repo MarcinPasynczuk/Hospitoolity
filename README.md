@@ -10,4 +10,9 @@ ver. 1.4
 -added html to project.
 -simple form for temperature storing.
 
+ver. 1.5
+-validation.
+-bootstrap added.
+-Connection with database.
+
 
