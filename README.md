@@ -14,5 +14,7 @@ ver. 1.5
 -validation.
 -bootstrap added.
 -Connection with database.
+-springData
+-CRUD,
 
 
