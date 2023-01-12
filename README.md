@@ -24,6 +24,6 @@ ver. 2.0
 - password security.
 - hmtl changes.
 - custom login and create account page.
-- new name - Hispitoolity.
+- new name - Hospitoolity.
 
 
