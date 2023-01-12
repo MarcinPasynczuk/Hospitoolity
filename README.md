@@ -1,4 +1,4 @@
-# My new project. Health and safety organizer for hospitality bussnesses.
+# Hospitoolity. Health and safety organizer for hospitality bussnesses.
 
 ver. 1.2 
 - Code for fridge temperature store with notes.
@@ -15,6 +15,15 @@ ver. 1.5
 -bootstrap added.
 -Connection with database.
 -springData
--CRUD,
+-CRUD.
+
+ver. 2.0
+-Spring security added.
+-login system.
+-creating new account system.
+-password security.
+-hmtl changes.
+-custom login and create account page.
+
 
 
