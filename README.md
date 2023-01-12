@@ -1,4 +1,4 @@
-# Hospitoolity. Health and safety organizer for hospitality bussnesses.
+# Hospitoolity. Organizer for hospitality bussnesses.
 
 ver. 1.2 
 - Code for fridge temperature store with notes.
