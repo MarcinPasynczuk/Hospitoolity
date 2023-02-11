@@ -39,7 +39,7 @@ ver. 1.4
 - simple form for temperature storing.
 
 ver. 1.5
-- validation.
+- validation. 
 - bootstrap added.
 - Connection with database.
 - springData
