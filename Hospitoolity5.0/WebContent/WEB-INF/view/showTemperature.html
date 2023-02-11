@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>Add temperature.</title>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container col-lg-8 col-md-12 col-sm-12">
+	
+	
+	
+	<div class="row">
+	<h1>List of stored temperatures.</h1>
+	</div>
+	
+	
+	
+	<div class="row">
+		<table class="table table-hover" th:if="${!temperatureCheckers.empty}">
+				<thead>
+					<tr>
+				<th scope="col">Date</th>
+				<th scope="col">#1 PM</th>
+				<th scope="col">#1 AM</th>
+				
+				<th scope="col">#2 PM</th>
+				<th scope="col">#2 AM</th>
+				
+				<th scope="col">#3 PM</th>
+				<th scope="col">#3 AM</th>
+				
+				<th scope="col">#4 PM</th>
+				<th scope="col">#4 AM</th>
+				
+				<th scope="col">#5 PM</th>
+				<th scope="col">#5 AM</th>
+				<th scope="col">Checked by:</th>
+				<th sec:authorize="hasRole('MANAGER')" scope="col">Edit</th>
+				<th sec:authorize="hasRole('MANAGER')" scope="col">Remove</th>
+				<th sec:authorize="hasRole('MANAGER')" scope="col">Details</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr th:each="temperatureChecker : ${temperatureCheckers}">
+				<td th:text="${#dates.format(temperatureChecker.date, 'dd.MM.yy')}"></td>
+				
+				<td th:text="${temperatureChecker.firstFridgeTemperatureMorning}"></td>
+				<td th:text="${temperatureChecker.firstFridgeTemperatureEvening}"></td>
+				
+				<td th:text="${temperatureChecker.secondFridgeTemperatureMorning}"></td>
+				<td th:text="${temperatureChecker.secondFridgeTemperatureEvening}"></td>
+				
+				<td th:text="${temperatureChecker.thirdFridgeTemperatureMorning}"></td>
+				<td th:text="${temperatureChecker.thirdFridgeTemperatureEvening}"></td>
+				
+				<td th:text="${temperatureChecker.fourthFridgeTemperatureMorning}"></td>
+				<td th:text="${temperatureChecker.fourthFridgeTemperatureEvening}"></td>
+				
+				<td th:text="${temperatureChecker.fifthFridgeTemperatureMorning}"></td>
+				<td th:text="${temperatureChecker.fifthFridgeTemperatureEvening}"></td>
+				
+				<td th:text="${temperatureChecker.whoCheckedTemperature}"></td>
+				
+				<td sec:authorize="hasRole('MANAGER')"><a class="btn btn-primary" th:href="@{/editTemperature/} + ${temperatureChecker.id}">Edit</a></td>
+				<td sec:authorize="hasRole('MANAGER')"><a class="btn btn-danger" th:href="@{/deleteTemperature/} + ${temperatureChecker.id}">Delete</a></td>				
+				<td sec:authorize="hasRole('MANAGER')"><a class="btn btn-success" th:href="@{/editTemperatureDetails/} + ${temperatureChecker.id}">Details</a></td>
+																
+			</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="row" th:if="${temperatureCheckers.empty}">
+			<h3>No temperature data stored.</h3>
+		</div>
+		
+		<div class="row">
+			<a th:href="@{/}" class="btn btn-warning">Back</a>
+		</div>
+	</div>
+</body>
+</html>
