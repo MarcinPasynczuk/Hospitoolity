@@ -45,7 +45,7 @@ ver. 1.5
 - springData
 - CRUD.
 
-ver. 2.0
+ver. 2.0 
 - Spring security added.
 - login system.
 - creating new account system.
