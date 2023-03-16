@@ -6,7 +6,7 @@ Objective:
 To develop an app that allows restaurants, hotels, and other hospitality businesses to easily store and access data from their HACCP plans in order to improve food safety and compliance with UK regulations.
   
 Key features:   
-  
+   
 Easy data entry for HACCP information, such as critical control points, monitoring procedures, and corrective actions
 Secure storage of data to ensure confidentiality and compliance with regulations
 Access to data from any device with internet access, allowing for easy collaboration among team members
