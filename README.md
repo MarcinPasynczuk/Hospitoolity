@@ -11,7 +11,7 @@ Easy data entry for HACCP information, such as critical control points, monitori
 Secure storage of data to ensure confidentiality and compliance with regulations
 Access to data from any device with internet access, allowing for easy collaboration among team members
 Reporting and analytics capabilities to help businesses identify areas for improvement and demonstrate compliance to regulatory bodies
-
+ 
 Target market:
 Restaurants, hotels, catering companies, and other hospitality businesses in the UK that are required to implement HACCP plans by UK regulations.
 
