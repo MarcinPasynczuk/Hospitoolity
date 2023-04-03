@@ -2,7 +2,7 @@
     
   
      
-Objective:
+Objective: 
 To develop an app that allows restaurants, hotels, and other hospitality businesses to easily store and access data from their HACCP plans in order to improve food safety and compliance with UK regulations. 
    
 Key features:   
