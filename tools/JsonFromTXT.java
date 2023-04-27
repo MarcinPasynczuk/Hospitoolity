@@ -6,7 +6,7 @@ public class Main {
 
             String line;
             int checkBoxCounter = 0;
-            int inputNameCounter = 0;
+            int inputNameCounter = 0; 
             writer.write("[\n");
             while ((line = reader.readLine()) != null) {
                 String[] splitLine = line.split(":", 3);
