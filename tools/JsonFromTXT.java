@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         try {
             BufferedReader reader = new BufferedReader(new FileReader("book.txt"));
             BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
