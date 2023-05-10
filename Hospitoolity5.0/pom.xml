@@ -3,7 +3,7 @@
   <groupId>lynx.Hospitoolity</groupId>
   <artifactId>Hospitoolity</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>war</packaging> 
   <name>Hospitoolity</name>
   
   <build>
