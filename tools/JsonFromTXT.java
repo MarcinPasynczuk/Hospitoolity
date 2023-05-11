@@ -3,7 +3,7 @@ public class Main {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("book.txt"));
             BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
-
+ 
             String line;
             int checkBoxCounter = 0;
             int inputNameCounter = 0; 
