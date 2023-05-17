@@ -13,7 +13,7 @@ public class Main {
 
                 if (splitLine.length < 3) {
                     continue;
-                }
+                } 
 
                 String type = splitLine[1].trim().substring(3);
                 String name = splitLine[2];
