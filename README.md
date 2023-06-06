@@ -26,36 +26,3 @@ Expected ROI:
 The app will help businesses to improve food safety and compliance, which would protect business reputation, prevent legal penalties and increase customer trust. Additionally, the app can also help businesses to save time and resources on data management, which would increase efficiency and improve overall operations.
 
 Overall, this app would provide a valuable tool for businesses in the hospitality industry to improve food safety, compliance and efficiency.
-
-
-ver. 1.2 
-- Code for fridge temperature store with notes.
-- Saving data top .txt file.
-- Reading data from file and then sorting it out by date.
-
-ver. 1.4
-- rebuild for Spring. 
-- added html to project.
-- simple form for temperature storing.
-
-ver. 1.5
-- validation. 
-- bootstrap added.
-- Connection with database.
-- springData
-- CRUD.
-
-ver. 2.0 
-- Spring security added.
-- login system.
-- creating new account system.
-- password security.
-- hmtl changes.
-- custom login and create account page.
-- new name - Hospitoolity.
-
-ver 3.0
-- everything from business side is done. Website is ready to main-business purpose.
-- new layout.
-
- 
