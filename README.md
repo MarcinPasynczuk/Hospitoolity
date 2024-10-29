@@ -1,6 +1,9 @@
 # Hospitoolity - Repository for Alpha Version
 
-This repository contains the alpha version of **Hospitoolity**, a data management app for the hospitality industry. The live alpha version is accessible at [www.hospitoolity.com](http://www.hospitoolity.com). The app empowers restaurants, hotels, and catering businesses to effectively manage HACCP (Hazard Analysis and Critical Control Points) plans, enhancing food safety and regulatory compliance within the UK.
+This repository contains the alpha version of **Hospitoolity**, a data management app designed for the hospitality industry. The current completed version is accessible at [www.hospitoolity.com](http://www.hospitoolity.com). This repository serves as a foundational template, capturing the initial concept and vision that guided the creation of **Hospitoolity**. It showcases the app’s evolution from a preliminary idea into a functional, real-world tool—now supporting restaurants, hotels, and catering businesses in managing HACCP (Hazard Analysis and Critical Control Points) plans more effectively, enhancing food safety, and ensuring regulatory compliance across the UK.
+
+This early-stage outline illustrates the thought process behind **Hospitoolity** and reflects how that vision transformed into a working startup, now serving as a vital tool in the hospitality sector.
+
 
 ## Overview
 
